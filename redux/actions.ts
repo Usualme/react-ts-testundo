@@ -7,23 +7,18 @@ import {
   SetUndoValue
 } from './types';
 
-export const setTextFieldValue = ({ fieldId, value }): SetTextFieldValue => ({
+export const setTextFieldValue = (
+  payload: SetTextFieldValue['payload']
+): SetTextFieldValue => ({
   type: SET_TEXT_FIELD_VALUE,
-  payload: {
-    fieldId,
-    value
-  }
+  payload
 });
 
-export const setNumberFieldValue = ({
-  fieldId,
-  value
-}): SetNumberFieldValue => ({
+export const setNumberFieldValue = (
+  payload: SetNumberFieldValue['payload']
+): SetNumberFieldValue => ({
   type: SET_NUMBER_FIELD_VALUE,
-  payload: {
-    fieldId,
-    value
-  }
+  payload
 });
 
 export const setUndoValue = (): SetUndoValue => ({

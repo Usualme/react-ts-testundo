@@ -16,7 +16,7 @@ const NumberField: React.FC<Props> = ({ fieldId, fieldName, value }) => {
 
   const setValue = useCallback(newValue => {
     dispatch(setNumberFieldValue({ fieldId, value: newValue }));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="fields-container">

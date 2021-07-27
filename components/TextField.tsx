@@ -13,9 +13,12 @@ type Props = {
 const TextField: React.FC<Props> = ({ fieldId, fieldName, value }) => {
   const dispatch = useDispatch();
 
-  const setValue = useCallback(e => {
-    dispatch(setTextFieldValue({ fieldId, value: e.target.value }));
-  }, []);
+  const setValue = useCallback(
+    e => {
+      dispatch(setTextFieldValue({ fieldId, value: e.target.value }));
+    },
+    [dispatch]
+  );
 
   return (
     <div className="fields-container">
